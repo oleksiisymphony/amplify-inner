@@ -1,19 +1,31 @@
 {
-  "dev": {
+  "staging": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-amplifywrapper-dev-143324-authRole",
-      "UnauthRoleArn": "arn:aws:iam::245407771023:role/amplify-amplifywrapper-dev-143324-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::245407771023:role/amplify-amplifywrapper-dev-143324-authRole",
+      "AuthRoleName": "amplify-amplifyd8a3e4a6b24e4-staging-123418-authRole",
+      "UnauthRoleArn": "arn:aws:iam::245407771023:role/amplify-amplifyd8a3e4a6b24e4-staging-123418-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::245407771023:role/amplify-amplifyd8a3e4a6b24e4-staging-123418-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-amplifywrapper-dev-143324-deployment",
-      "UnauthRoleName": "amplify-amplifywrapper-dev-143324-unauthRole",
-      "StackName": "amplify-amplifywrapper-dev-143324",
-      "StackId": "arn:aws:cloudformation:us-east-2:245407771023:stack/amplify-amplifywrapper-dev-143324/89b2e910-3650-11ec-9c84-02f1e20a53b8",
-      "AmplifyAppId": "d8x2c8p4rhyqf"
+      "DeploymentBucketName": "amplify-amplifyd8a3e4a6b24e4-staging-123418-deployment",
+      "UnauthRoleName": "amplify-amplifyd8a3e4a6b24e4-staging-123418-unauthRole",
+      "StackName": "amplify-amplifyd8a3e4a6b24e4-staging-123418",
+      "StackId": "arn:aws:cloudformation:us-east-2:245407771023:stack/amplify-amplifyd8a3e4a6b24e4-staging-123418/08eb0be0-3b10-11ec-a566-063a54b1834a",
+      "AmplifyAppId": "d21ummo4ja0abg"
     },
     "categories": {
       "auth": {
-        "amplifywrapper6b05ba03": {}
+        "helloworld679bbcf8": {
+          "userPoolId": "us-east-2_WOtslita3",
+          "userPoolName": "amplifywrapper6b05ba03_userpool_6b05ba03-dev",
+          "webClientId": "pd801n807quo5a0s9r51asuls",
+          "nativeClientId": "pd801n807quo5a0s9r51asuls",
+          "identityPoolId": "us-east-2:1fb4a316-4067-4b20-97c8-150a8c09ea3d",
+          "identityPoolName": "amplifywrapper6b05ba03_identitypool_6b05ba03__dev",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::245407771023:role/amplify-amplifywrapper-dev-143324-authRole",
+          "authRoleName": "amplify-amplifywrapper-dev-143324-authRole",
+          "unauthRoleArn": "arn:aws:iam::245407771023:role/amplify-amplifywrapper-dev-143324-unauthRole",
+          "unauthRoleName": "amplify-amplifywrapper-dev-143324-unauthRole"
+        }
       }
     }
   }

@@ -4,16 +4,17 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import packageJson from './package.json';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+// eslint-disable-next-line import/no-unresolved
+import ModuleFederationPlugin from 'webpack/lib/container/ModuleFederationPlugin';
 
 
 const config: Configuration = {
   mode: "production",
-  entry: "./src/index.tsx",
-  output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "[name].[contenthash].js",
-    publicPath: "",
-  },
+  entry: "./src/index.ts",
+gi
   module: {
     rules: [
       {
@@ -50,6 +51,18 @@ const config: Configuration = {
     }),
     new ESLintPlugin({
       extensions: ["js", "jsx", "ts", "tsx"],
+    }),
+    new ModuleFederationPlugin({
+      name: 'WebClientApp',
+      filename: 'web-client-remote.js',
+      exposes: {
+        './App': './src/App',
+      },
+      shared: {
+        ...packageJson.dependencies,
+        react: { singleton: true, eager: true, requiredVersion: packageJson.dependencies.react },
+        "react-dom": { singleton: true, eager: true, requiredVersion: packageJson.dependencies["react-dom"] }
+      },
     }),
     new CleanWebpackPlugin(),
   ],
