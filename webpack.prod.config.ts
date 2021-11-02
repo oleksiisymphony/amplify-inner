@@ -14,7 +14,6 @@ import ModuleFederationPlugin from 'webpack/lib/container/ModuleFederationPlugin
 const config: Configuration = {
   mode: "production",
   entry: "./src/index.ts",
-gi
   module: {
     rules: [
       {
